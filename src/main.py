@@ -1,12 +1,3 @@
-# workspace
-
-## Reading a CSV file and displaying a graph
-
-This section explains how to read a CSV file and display a graph using Python.
-
-### Example Code
-
-```python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -24,4 +15,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
