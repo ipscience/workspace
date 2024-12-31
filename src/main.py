@@ -8,20 +8,8 @@ def read_csv(file_path):
 def plot_graph(data):
     st.line_chart(data)
 
-def perform_arithmetic_operations(value1, value2):
-    try:
-        value1 = float(value1)
-        value2 = float(value2)
-        addition = value1 + value2
-        subtraction = value1 - value2
-        multiplication = value1 * value2
-        division = value1 / value2 if value2 != 0 else 'Infinity'
-        return addition, subtraction, multiplication, division
-    except ValueError:
-        return '🙅', '🙅', '🙅', '🙅'
-
 def main():
-    st.title("CSV File Uploader and Arithmetic Operations")
+    st.title("CSV File Uploader and Analyzer")
 
     file_path = 'data.csv'
     if not os.path.exists(file_path):
@@ -34,16 +22,6 @@ def main():
     else:
         data = read_csv(file_path)
         plot_graph(data)
-
-    st.title("Arithmetic Operations")
-    value1 = st.text_input("Enter the first value:")
-    value2 = st.text_input("Enter the second value:")
-    if st.button("Calculate"):
-        addition, subtraction, multiplication, division = perform_arithmetic_operations(value1, value2)
-        st.write(f"Addition: {addition}")
-        st.write(f"Subtraction: {subtraction}")
-        st.write(f"Multiplication: {multiplication}")
-        st.write(f"Division: {division}")
 
 if __name__ == "__main__":
     main()
