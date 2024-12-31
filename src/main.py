@@ -23,5 +23,9 @@ def main():
         data = read_csv(file_path)
         plot_graph(data)
 
+    # Text editor functionality
+    text = st.text_area("Enter text here")
+    st.write("You entered:", text)
+
 if __name__ == "__main__":
     main()

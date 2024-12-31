@@ -14,6 +14,16 @@ The web application allows users to upload a CSV file and analyze it to generate
    - Once the CSV file is uploaded, the application will automatically read the file and generate graphs.
    - The graphs will be displayed on the web application.
 
+## Text Editor Functionality
+
+The web application now includes a text editor that allows users to input and edit text.
+
+### Instructions
+
+1. Use the text editor:
+   - The text editor is available on the main page of the application.
+   - You can input and edit text using the text editor.
+
 ### Example Code
 
 ```python
@@ -40,6 +50,10 @@ def main():
     else:
         data = read_csv(file_path)
         plot_graph(data)
+
+    # Text editor functionality
+    text = st.text_area("Enter text here")
+    st.write("You entered:", text)
 
 if __name__ == "__main__":
     main()
